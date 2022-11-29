@@ -1,23 +1,135 @@
+/* Declarations */
 :root{ 
+    /* Colors */
     --indigo-dye: hsla(212, 72%, 26%, 1);
     --prussian-blue: hsla(215, 66%, 22%, 1);
     --oxford-blue: hsla(213, 72%, 16%, 1);
     --pewter-blue: hsla(209, 32%, 66%, 1);
+    --pewter-blue2: rgb(69, 115, 158);
     --mint-cream: hsla(111, 24%, 94%, 1);
     --white: hsl(0, 0%, 100%);
-}
+    
+    
 
+}
+/* CSS Reset */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 body{
     background-color: var(--pewter-blue);
     color: var(--white);
     display: grid;
+    min-height: 100vh;
     place-content: center;
-    padding: 3.125rem 0; 
+    gap: 10px;
 }
+
+
+
+header, section {
+    display: grid;
+    gap: 0.625rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    min-width: 23.4375rem;
+    border-radius: 0.3125rem;
+    border: 2px solid var(--oxford-blue);
+    padding: 10px;
+}
+
+header h1, section h2{
+
+ background-image: linear-gradient(90deg, var(--oxford-blue), var(--prussian-blue), var(--indigo-dye));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+#new-task-form{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    background-color: var(--pewter-blue2);
+    border-radius: 0.625rem;
+
+  
+}
+
+#new-task-input, .text{
+    border-radius: 10px;
+    border: 0;
+    background-color: inherit;
+    text-align: center;
+    background-image: linear-gradient(90deg, var(--mint-cream), var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    outline: none;
+    word-break: break-all;
+        
+}
+
+
+
+#new-task-submit, button {
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    background-image: linear-gradient(90deg, var(--mint-cream), var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+#new-task-submit:hover, .edit:hover, .delete:hover{
+    color: var(--oxford-blue);
+    
+    
+
+}
+
+
+.task-list{
+    display:flex;
+    flex-direction: column;
+}
+
+#task{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.3125rem;  
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    background-color: var(--pewter-blue2);
+    border-radius: 0.625rem;
+    min-height: 40px;
+    height: fit-content;
+    padding: 10px;
+}
+
+.actions{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
